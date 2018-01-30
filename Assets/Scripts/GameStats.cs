@@ -6,8 +6,8 @@ public class GameStats : MonoBehaviour {
 
     public static GameStats instance = null;
 
-    public int playerScore = 0;
-    public int playerHealth = 3;
+    static public int playerScore = 0;
+    static public int playerHealth = 3;
     // Use this for initialization
     private void Awake()
     {
@@ -29,22 +29,23 @@ public class GameStats : MonoBehaviour {
 
     }
 
-    public void SetScore(int score)
+    public static void SetScore(int score)
     {
         playerScore = score;
     }
 
-    public void IncrementScore(int points)
+    public static void IncrementScore(int points)
     {
         playerScore += points;
+        print(playerScore);
     }
 
-    public void SetHealth(int health)
+    public static void SetHealth(int health)
     {
         playerHealth = health;
     }
 
-    public void DecrementHealth(int healthLost)
+    public static void DecrementHealth(int healthLost)
     {
         playerHealth--;
         if(playerHealth <= 0)
@@ -56,7 +57,7 @@ public class GameStats : MonoBehaviour {
     }
 
 
-   public void PlayerDeath()
+    public static void PlayerDeath()
     {
         print("not implemented, player should die");
     }

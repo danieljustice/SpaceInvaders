@@ -2,15 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPoints : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+[CreateAssetMenu(fileName = "Data", menuName = "Inventory/points", order = 1)]
+public class EnemyPoints : ScriptableObject
+{
+    public int points = 10;
 }
