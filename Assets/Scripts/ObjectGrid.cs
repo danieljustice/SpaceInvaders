@@ -40,7 +40,7 @@ public class ObjectGrid : MonoBehaviour {
             {
                 Transform point = Instantiate(rowPrefabs[i % height]);
                 position.x =  (j - width/2f + .5f) * horizontalSeparation;
-                print(i % width * horizontalSeparation);
+                //print(i % width * horizontalSeparation);
                 position.y = (i-height/2f + .5f) * vertSeparation;
 
                 point.localPosition = position;

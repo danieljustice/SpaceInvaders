@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour {
     private CharacterController controller;
     private Vector3 movement = Vector3.zero;
 
+    public GameObject bullet;
+    public Vector3 spawnOffset = new Vector3(0f, 0f, 0f);
     // Use this for initialization
-	void Start () {
+    void Start () {
         controller = GetComponent<CharacterController>();
+        bullet.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -21,5 +24,23 @@ public class PlayerMovement : MonoBehaviour {
 
         movement *= speed;
         controller.Move(movement * Time.deltaTime);
-	}
+
+        if (Input.GetKeyDown("space"))
+        {
+            Fire();
+        }
+    }
+
+    void Fire()
+    {
+       
+        print(bullet.activeSelf);
+        if (!bullet.activeSelf)
+        {
+            Vector3 spawnPoint = spawnOffset + transform.position;
+            //bullet.transform =
+            bullet.transform.localPosition = spawnPoint;
+            bullet.SetActive(true);
+        }
+    }
 }
