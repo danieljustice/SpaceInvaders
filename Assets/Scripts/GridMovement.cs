@@ -80,7 +80,6 @@ public class GridMovement : MonoBehaviour {
 
     IEnumerator PlayAudio(AudioClip clip)
     {
-        print("play");
         audioSource.clip = clip;
         audioSource.Play();
         yield return new WaitForSeconds(audioSource.clip.length);
