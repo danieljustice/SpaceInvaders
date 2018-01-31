@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     public float speed = 10f;
-
+    public AudioSource audio;
+    public AudioClip shootClip;
     private CharacterController controller;
     private Vector3 movement = Vector3.zero;
 
@@ -41,6 +42,16 @@ public class PlayerMovement : MonoBehaviour {
             //bullet.transform =
             bullet.transform.localPosition = spawnPoint;
             bullet.SetActive(true);
+            print("wooooops");
+            StartCoroutine(PlayAudio(shootClip));
         }
+    }
+
+    IEnumerator PlayAudio(AudioClip clip)
+    {
+        print("play");
+        audio.clip = clip;
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
     }
 }

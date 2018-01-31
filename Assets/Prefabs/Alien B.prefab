@@ -2186,7 +2186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507453068653044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.883619, y: -31.373972, z: -67.82031}
+  m_LocalPosition: {x: 32.531586, y: -23.72306, z: -352.15625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4482170025021458}
@@ -7356,6 +7356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPoints: {fileID: 11400000, guid: 3aea31410a75fa449b58102fbfed1e3c, type: 2}
+  audioSource: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 3a31f76f0e5816549869d0f1870222c8, type: 3}
 --- !u!114 &114932745524299984
 MonoBehaviour:
   m_ObjectHideFlags: 1

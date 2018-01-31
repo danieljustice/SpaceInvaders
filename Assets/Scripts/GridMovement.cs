@@ -10,6 +10,10 @@ public class GridMovement : MonoBehaviour {
     public float dropDistance = 10f;
     private float deltaTime = 0f;
     private AlienMovement[] alienMovements;
+
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+    private int currentClip = 0;
     // Use this for initialization
     void Start () {
         alienMovements = transform.GetComponentsInChildren<AlienMovement>();
@@ -53,6 +57,9 @@ public class GridMovement : MonoBehaviour {
 
         transform.position += step;
 
+        currentClip = ++currentClip % clips.Length;
+        StartCoroutine(PlayAudio(clips[currentClip]));
+
     }
 
     public void DropStep()
@@ -69,5 +76,13 @@ public class GridMovement : MonoBehaviour {
             DropStep();
         }
         ableToChangeDirection = false;
+    }
+
+    IEnumerator PlayAudio(AudioClip clip)
+    {
+        print("play");
+        audioSource.clip = clip;
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
     }
 }
