@@ -472,7 +472,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4397284221351008}
-  - component: {fileID: 114848970930918822}
   m_Layer: 0
   m_Name: Alien A1
   m_TagString: Untagged
@@ -2720,15 +2719,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1868249594677842}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114848970930918822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1516566437088062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51efd066e77974640af5af96376ada25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPoints: {fileID: 11400000, guid: 6277b6823899f83448a88148ffe962a0, type: 2}
