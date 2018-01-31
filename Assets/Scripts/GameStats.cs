@@ -47,17 +47,17 @@ public class GameStats : MonoBehaviour {
 
     public static void DecrementHealth(int healthLost)
     {
-        playerHealth--;
+        playerHealth -= healthLost;
         if(playerHealth <= 0)
         {
             //game over
             //Death function
-            PlayerDeath();
+            GameOver();
         }
     }
 
 
-    public static void PlayerDeath()
+    public static void GameOver()
     {
         print("not implemented, player should die");
     }
