@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMove : MonoBehaviour {
+public class EnemyBulletMove : MonoBehaviour {
     public float speed = 10f;
 
     private Vector3 movement = Vector3.zero;
@@ -19,6 +19,7 @@ public class BulletMove : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

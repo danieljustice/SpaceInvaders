@@ -2186,7 +2186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507453068653044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.531586, y: -23.72306, z: -352.15625}
+  m_LocalPosition: {x: -4.178976, y: -1.169857, z: -331.6172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4482170025021458}
@@ -7371,4 +7371,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite1: {fileID: 1104369788548898}
   sprite2: {fileID: 1802481802118876}
+  shotChance: {fileID: 11400000, guid: 3f429f3b9853c8440ad43bdf5c5e392d, type: 2}
+  shot: {fileID: 1044954555283998, guid: 8f2495235492a684e8f098b4f20427f1, type: 2}
   gridMovement: {fileID: 0}

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - Boundary
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
@@ -15,11 +16,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyBullet
+  - Bullet
+  - Shooter
+  - Alien
+  - Boundaries
   - 
   - 
   - 
