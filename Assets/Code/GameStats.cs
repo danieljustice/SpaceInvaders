@@ -44,7 +44,6 @@ public class GameStats : MonoBehaviour {
     public static void IncrementScore(int points)
     {
         playerScore += points;
-        print(playerScore);
         instance.UpdateScore();
     }
 

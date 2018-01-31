@@ -15,12 +15,9 @@ public class EnemyDeath : MonoBehaviour {
     {
         if(collision.transform.tag == "Bullet")
         {
-            print(transform.tag);
-            print(collision.transform.tag);
             GameStats.IncrementScore(enemyPoints.points);
             StartCoroutine(PlayAudio(deathClip));
-            gameObject.SetActive(false);
-            
+            gameObject.SetActive(false);            
         }
     }
 

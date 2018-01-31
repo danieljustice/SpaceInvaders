@@ -10,7 +10,6 @@ public class PlayerDeath : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         string otherTag = collision.transform.tag;
-        print(otherTag);
         if(otherTag == "EnemyBullet" || otherTag == "Alien")
         {
             GameStats.DecrementHealth(1);

@@ -35,21 +35,18 @@ public class PlayerMovement : MonoBehaviour {
     void Fire()
     {
        
-        print(bullet.activeSelf);
         if (!bullet.activeSelf)
         {
             Vector3 spawnPoint = spawnOffset + transform.position;
             //bullet.transform =
             bullet.transform.localPosition = spawnPoint;
             bullet.SetActive(true);
-            print("wooooops");
             StartCoroutine(PlayAudio(shootClip));
         }
     }
 
     IEnumerator PlayAudio(AudioClip clip)
     {
-        print("play");
         audio.clip = clip;
         audio.Play();
         yield return new WaitForSeconds(audio.clip.length);

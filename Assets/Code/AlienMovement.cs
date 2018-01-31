@@ -36,7 +36,6 @@ public class AlienMovement : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("collided");
         if(collision.transform.tag == "Boundary")
         {
             gridMovement.ChangeDirection();
